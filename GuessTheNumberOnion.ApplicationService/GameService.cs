@@ -14,6 +14,7 @@ namespace GuessTheNumberOnion.ApplicationService
         {
             _gameRepository = gameRepository;
         }
+
         public Game StartGame()
         {
             var game = new Game();
