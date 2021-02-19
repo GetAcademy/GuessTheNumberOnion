@@ -1,15 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GuessTheNumberOnion.ApplicationService\GuessTheNumberOnion.ApplicationService.csproj" />
     <ProjectReference Include="..\GuessTheNumberOnion.DomainModel\GuessTheNumberOnion.DomainModel.csproj" />
     <ProjectReference Include="..\GuessTheNumberOnion.DomainService\GuessTheNumberOnion.DomainService.csproj" />
-    <ProjectReference Include="..\GuessTheNumberOnion.Infrastructure\GuessTheNumberOnion.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

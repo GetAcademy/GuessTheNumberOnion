@@ -1,4 +1,7 @@
 ﻿using System;
+using GuessTheNumberOnion.ApplicationService;
+using GuessTheNumberOnion.DomainModel;
+using GuessTheNumberOnion.Infrastructure;
 
 namespace GuessTheNumber
 {
@@ -6,14 +9,11 @@ namespace GuessTheNumber
     {
         static void Main(string[] args)
         {
-            /**
-             * 1: Use case diagram = hva er funksjonaliteten?
-             * 2: Klassediagram = hvem er skuespillerne? aktørene?
-             * 3: Sekvensdiagram for hvert use case
-             *      Hvordan samarbeider klassene for å oppnå hver bit funksjonalitet?
-             */
+            var gameRepository = new GameInMemoryRepository();
+            var gameService = new GameService(gameRepository);
 
-            var game = new Game();
+            var game = gameService.StartGame();
+
             while (true)
             {
                 ShowInfo(game);
@@ -23,18 +23,18 @@ namespace GuessTheNumber
                 {
                     if (game != null)
                     {
-                        game.GiveUp();
+                        gameService.GiveUp(game.Id);
                         Console.WriteLine("Trykk en tast for å fortsette");
                         Console.ReadKey();
                     }
 
-                    game = new Game();
+                    game = gameService.StartGame();
                     continue;
                 }
 
                 var isNumber = int.TryParse(command, out int number);
                 if (!isNumber) continue;
-                game.Guess(number);
+                game.Guess(new Guess(number));
             }
         }
 
@@ -47,8 +47,28 @@ namespace GuessTheNumber
         private static void ShowInfo(Game game)
         {
             Console.Clear();
-            game.Show();
+            ShowGame(game);
             Console.WriteLine("Kommandoer: \r\n - ny     = ny runde\r\n - <tall> = gjette\r\n - exit   = avslutte\r\n");
+        }
+
+        public static void ShowGame(Game game)
+        {
+            var guessCount = game._guesses.Count;
+            var solvedText = game.IsSolved ? "Du har funnet det hemmelige tallet - gratulerer!" :
+                guessCount == 0 ? "Lykke til med å finne det hemmelige tallet; skriv inn din gjetning." :
+                "Du har ikke funnet det hemmelige tallet - prøv igjen!";
+            var pluralPrefix = guessCount == 1 ? "" : "er";
+            var guessNoText = guessCount == 0
+                ? ""
+                : $"Du har tippet {guessCount} gang{pluralPrefix}.";
+            Console.WriteLine(solvedText);
+            Console.WriteLine(guessNoText);
+            if (guessCount == 0) return;
+            Console.WriteLine("Dine gjetninger: ");
+            foreach (var guess in game._guesses)
+            {
+                Console.WriteLine(guess.Description);
+            }
         }
     }
 }

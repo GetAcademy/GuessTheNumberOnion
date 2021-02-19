@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GuessTheNumber
+namespace GuessTheNumberOnion.DomainModel
 {
-    class Guess
+    public class Evaluation
     {
         private int _number;
         private bool _isTooHigh;
@@ -14,9 +14,9 @@ namespace GuessTheNumber
         private string DescriptionWord =>
             IsCorrect ? "riktig!" :
             _isTooHigh ? "for høyt" :
-             "for lavt";
+            "for lavt";
 
-        public Guess(int number, bool isTooHigh, bool isCorrect)
+        public Evaluation(int number, bool isTooHigh, bool isCorrect)
         {
             _number = number;
             _isTooHigh = isTooHigh;
