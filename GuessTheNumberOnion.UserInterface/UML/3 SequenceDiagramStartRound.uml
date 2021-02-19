@@ -1,0 +1,13 @@
+﻿@startuml
+
+actor User
+
+User -> Program: StartRound()
+opt unifinished game
+    Program -> Game: game.GiveUp()
+end
+
+Program -> Game: game = new Game() 
+Program -> Game: game.Show();
+
+@enduml

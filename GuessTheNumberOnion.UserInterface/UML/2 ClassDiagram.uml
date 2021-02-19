@@ -1,0 +1,15 @@
+﻿@startuml
+
+class Game{
+    correctNumber
+}
+
+class Guess {
+    number
+    IsCorrect
+    Description
+}
+
+Game -* Guess
+
+@enduml

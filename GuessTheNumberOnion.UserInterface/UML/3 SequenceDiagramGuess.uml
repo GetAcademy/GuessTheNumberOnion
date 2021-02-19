@@ -1,0 +1,11 @@
+﻿@startuml
+
+actor User
+
+User -> Program: Guess(number)
+Program -> Game: game.Guess(number)
+Game -> GameResult: gameResult = new GameResult(number, status)
+Game -> Game: Add(gameResult)
+Program -> Game: game.Show();
+
+@enduml

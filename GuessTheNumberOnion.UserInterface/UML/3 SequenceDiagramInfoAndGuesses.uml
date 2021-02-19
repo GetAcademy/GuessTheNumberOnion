@@ -1,0 +1,11 @@
+﻿@startuml
+
+actor User
+
+Program -> Game: game.Show();
+Game -> Game: ShowIsSuccessAndNoOfGuesses()
+loop
+	Game -> GameResult: gameResult.Show()
+end
+
+@enduml
