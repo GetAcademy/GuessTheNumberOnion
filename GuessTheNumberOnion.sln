@@ -1,27 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessTheNumberOnion.UserInterface", "GuessTheNumberOnion.UserInterface\GuessTheNumberOnion.UserInterface.csproj", "{990ADCFA-4E2C-4ADB-B913-748928701459}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Core", "1 Core", "{4E50DF29-703C-4EA6-B67D-104DA9EE86E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessTheNumberOnion.ApplicationService", "GuessTheNumberOnion.ApplicationService\GuessTheNumberOnion.ApplicationService.csproj", "{1E1FC011-E314-4720-9968-3B6A48DB2120}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessTheNumberOnion.ApplicationService", "GuessTheNumberOnion.ApplicationService\GuessTheNumberOnion.ApplicationService.csproj", "{1E1FC011-E314-4720-9968-3B6A48DB2120}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessTheNumberOnion.DomainService", "GuessTheNumberOnion.DomainService\GuessTheNumberOnion.DomainService.csproj", "{E8AD039B-A90D-4893-9B1F-2391C8E4110D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessTheNumberOnion.DomainService", "GuessTheNumberOnion.DomainService\GuessTheNumberOnion.DomainService.csproj", "{E8AD039B-A90D-4893-9B1F-2391C8E4110D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessTheNumberOnion.DomainModel", "GuessTheNumberOnion.DomainModel\GuessTheNumberOnion.DomainModel.csproj", "{4486DF22-AE08-4ABB-B2E4-D26F5B9C968A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1", "1", "{BFEF8BFF-D181-420F-B410-60E92FB018D2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2", "2", "{83506E7E-4E8B-4D8D-BED2-A5E40F69D36E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3", "3", "{F751D80B-0B5B-4FB4-A8D0-942B94B78740}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessTheNumberOnion.DomainModel", "GuessTheNumberOnion.DomainModel\GuessTheNumberOnion.DomainModel.csproj", "{4486DF22-AE08-4ABB-B2E4-D26F5B9C968A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Outer", "0 Outer", "{FB35DC5B-32DE-4D12-9265-452390D3624E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessTheNumberOnion.Infrastructure", "GuessTheNumberOnion.Infrastructure\GuessTheNumberOnion.Infrastructure.csproj", "{41BE3AF0-B78B-4549-82DE-CDF6431CBA0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessTheNumberOnion.Infrastructure", "GuessTheNumberOnion.Infrastructure\GuessTheNumberOnion.Infrastructure.csproj", "{41BE3AF0-B78B-4549-82DE-CDF6431CBA0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,12 +49,9 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{990ADCFA-4E2C-4ADB-B913-748928701459} = {FB35DC5B-32DE-4D12-9265-452390D3624E}
-		{1E1FC011-E314-4720-9968-3B6A48DB2120} = {BFEF8BFF-D181-420F-B410-60E92FB018D2}
-		{E8AD039B-A90D-4893-9B1F-2391C8E4110D} = {83506E7E-4E8B-4D8D-BED2-A5E40F69D36E}
-		{4486DF22-AE08-4ABB-B2E4-D26F5B9C968A} = {F751D80B-0B5B-4FB4-A8D0-942B94B78740}
-		{BFEF8BFF-D181-420F-B410-60E92FB018D2} = {4E50DF29-703C-4EA6-B67D-104DA9EE86E6}
-		{83506E7E-4E8B-4D8D-BED2-A5E40F69D36E} = {4E50DF29-703C-4EA6-B67D-104DA9EE86E6}
-		{F751D80B-0B5B-4FB4-A8D0-942B94B78740} = {4E50DF29-703C-4EA6-B67D-104DA9EE86E6}
+		{1E1FC011-E314-4720-9968-3B6A48DB2120} = {4E50DF29-703C-4EA6-B67D-104DA9EE86E6}
+		{E8AD039B-A90D-4893-9B1F-2391C8E4110D} = {4E50DF29-703C-4EA6-B67D-104DA9EE86E6}
+		{4486DF22-AE08-4ABB-B2E4-D26F5B9C968A} = {4E50DF29-703C-4EA6-B67D-104DA9EE86E6}
 		{41BE3AF0-B78B-4549-82DE-CDF6431CBA0F} = {FB35DC5B-32DE-4D12-9265-452390D3624E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
